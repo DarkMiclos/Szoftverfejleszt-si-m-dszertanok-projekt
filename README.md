@@ -53,5 +53,4 @@ Az első 4hétben a Homepage és Champions oldalakat készítjük el a common do
 ### Tesztelés
 
 ### Adatbázis séma
-![adatbázis séma](https://user-images.githubusercontent.com/71171019/190922153-3bca2904-b21b-4b68-9130-c2d8f516784f.svg)
-
+![adatbázis séma](https://user-images.githubusercontent.com/71171019/190922330-62ff32fa-103f-4ad8-9702-e016733cd679.png)
