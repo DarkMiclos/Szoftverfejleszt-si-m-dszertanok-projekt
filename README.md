@@ -10,10 +10,11 @@
 * Champion Tierlist
 
 ### Common
-
-Az oldalhoz fog tartozni egy sticky navigation bar, ahol lehet a különöző oldalak között váltani.
-Az oldalaknak lesz egy közös háttere(ami mozogni fog az oldallal), amit a következő [linken](https://www.guidingtech.com/wp-content/uploads/Best-League-of-Legends-Wallpapers-3_4d470f76dc99e18ad75087b1b8410ea9.jpg) lehet elérni.
-Továbbá lesz egy login felület is és egy felhasználó csak egy ratinget adhat egy champiönnek.
+* navbar - sticky, reszponzív, telefonon hamburger menü
+![navbar látvány terv](https://user-images.githubusercontent.com/71171019/190986471-dca69f5a-bc7f-440a-90a0-0193f31d308e.png)
+* background image - Ez mozogni fog az oldallal és a következő [linken](https://www.guidingtech.com/wp-content/uploads/Best-League-of-Legends-Wallpapers-3_4d470f76dc99e18ad75087b1b8410ea9.jpg) elérhető
+* login felület - popup, bejelntkezési információk bekérése, password hashing.
+![login látvány terv](https://user-images.githubusercontent.com/71171019/190987130-5890d56b-e495-498c-b860-ef43e6d2be35.png)
 
 ### Homepage
 * Rövid leírás az oldalról, hogy milyen funkciói vannak, illetve a készítők megemlítése.
@@ -38,7 +39,7 @@ Továbbá lesz egy login felület is és egy felhasználó csak egy ratinget adh
 
 * Egy táblázatszerű tierlist a championökről.
 
-Az első 4hétben a Homepage és Champions oldalakat készítjük el a common dolgokkal együtt.
+Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 
 ### Fejlesztéshez felhasznált eszközök
 * Vscode
@@ -46,11 +47,22 @@ Az első 4hétben a Homepage és Champions oldalakat készítjük el a common do
 * sqlite
 * github
 * trello
-* intellij
 * selenide
 * jest
 
 ### Tesztelés
+* Egység tesztek - Egység teszteléshez a jest tesztelő rendszert fogjuk használni
+* Integrációs tesztek - Integrációs teszteléshez a Selenide rendszert fogjuk használni
 
 ### Adatbázis séma
 ![adatbázis séma](https://user-images.githubusercontent.com/71171019/190922330-62ff32fa-103f-4ad8-9702-e016733cd679.png)
+
+### Követelmények
+* Dokumentáció elkészítése - github markdown
+* Adatbázis séma elkészítése - mysql workbench-el
+* Adatbázis létrehozása és feltöltése adatokkal - sqlite
+* Localhost setup - nodejs express.js
+* Navbar elkészítése - html, css
+* Routing - express.js
+* Login felület elkészítése - html, css, javascript
+* Homepage elkészítése - html, css
