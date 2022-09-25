@@ -1,6 +1,9 @@
 const express = require('express')
+const database = require('./database')
 const app = express()
 const port = 3000
+
+database.f();
 
 app.use(express.static("frontend/html"))
 
