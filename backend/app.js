@@ -3,7 +3,11 @@ const database = require('./database')
 const app = express()
 const port = 3000
 
-database.f();
+db = database.openDatabase();
+database.createUserTable(db);
+database.createNewUser(db, 'test', 'test');
+database.getUserTable(db);
+database.closeDatabase(db);
 
 app.use(express.static("frontend/html"))
 
