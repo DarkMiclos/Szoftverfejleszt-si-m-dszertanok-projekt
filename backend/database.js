@@ -1,4 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
+//const bcrypt = require ('bcrypt');
 
 function openDatabase() {
     return new sqlite3.Database("./database.db", sqlite3.OPEN_READWRITE, (err) => {
@@ -21,12 +22,20 @@ function createUserTable() {//Only creates table if it not exists
     closeDatabase(db);
 }
 
-function createNewUser(userName, password) {
+/*async function hashPassword(password){
+    const originalpassword = password;
+    const saltRounds = 10;
+    const passwordHash = bcrypt.hash(originalpassword, saltRounds);
+    return passwordHash;
+}*/
+
+async function createNewUser(userName, password) {
     db = openDatabase();
     console.log(password);
-    passwordHash = password
+    //const passwordHash = hashPassword(password);
+    console.log(passwordHash);
     //Todo hash password
-    db.run("INSERT INTO user(userId, userName, passwordHash) VALUES(NULL,?,?)", [userName, passwordHash], (err) => {
+    db.run("INSERT INTO user(userId, userName, passwordHash) VALUES(NULL,?,?)", [userName, password], (err) => {
         if(err) {
             return console.log(err.message);
         }

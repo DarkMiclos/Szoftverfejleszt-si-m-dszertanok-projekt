@@ -1,5 +1,5 @@
 const { response } = require('express')
-const express = require('express')
+//const express = require('express')
 const database = require('./database')
 const app = express()
 const port = 3000
@@ -19,8 +19,16 @@ app.get('/login', (req, res) => {
   res.render("login.ejs", {})
 })
 
+/*async function hashPassword(password){
+    const originalpassword = password;
+    const saltRounds = 10;
+    const passwordHash = bcrypt.hash(originalpassword, saltRounds);
+    return passwordHash;
+}*/
+
 app.post('/login', (req, res, next) => {
   var db = database.openDatabase()
+  //const pw = hashPassword(req.body.password);
   let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${req.body.password}"`;
   var x = 0;
 
