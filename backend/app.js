@@ -11,8 +11,10 @@ app.use(express.urlencoded({ extended: false}))
 
 app.set('view engine', 'ejs')
 
+app.engine('html', require('ejs').renderFile);
+
 app.get('/', (req, res) => {
-  res.render("index", {})
+  res.render("navbar", {})
 })
 
 app.get('/login', (req, res) => {
@@ -28,7 +30,7 @@ app.post('/login', (req, res, next) => {
    rows.forEach((row) => {
      if (row.userName === req.body.userName || row.passwordHash === req.body.password) {
          x = 1;
-         database.closeDatabase();
+         database.closeDatabase(db);
      }
      else{
          x = 2;

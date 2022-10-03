@@ -8,7 +8,7 @@ function openDatabase() {
     });
 }
 
-function closeDatabase() {//Call it if we dont want to do anything anymore in the database
+function closeDatabase(db) {//Call it if we dont want to do anything anymore in the database
     db.close((err) => {
         if (err) return console.error(err.message);
     })
