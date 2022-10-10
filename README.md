@@ -10,12 +10,14 @@ AZ AGILIS MÓDSZERTAN ALAPELVEI
 * AZ ÜGYFÉLLEL LEGYEN MEGFELELŐ A KAPCSOLATTARTÁS:
 * Az agilis fejlesztés sajátossága, hogy szoros kapcsolatot tételez fel a szoftver felhasználója és fejlesztői között.
 *  Másképp fogalmazva, a fejlesztés csak akkor lehet eredményes, ha az érintettek közötti kommunikáció megfelelő mélységű.
+*  Amennyiben a kommunikáció nem kielégítő, a készítők nem folytatják az oldal adott részének fejlesztését, amíg tisztázásra nem kerülnek az igények.
 
 EGY TERV LEGYEN HIHETŐ (REÁLIS):
 * Az innovatív (kockázatosabb, bizonytalanabb) feladatokat (projekteket) csak olyan időtávra érdemes részletesen megtervezni,
 *  amelyben a tervtől való eltérés mértéke várhatóan nem lesz elfogadhatatlanul nagy.
 *   Ez a tervezési alapelv a klasszikus projektmenedzsment eszköztárából sem hiányzik.
 *    Ami újszerűnek tekinthető az agilis világban, az a tervezés mindenhatóságába vetett hit megkérdőjelezése.
+*    Ennek érdekében nyomatékosítjuk a KOMMUNIKÁCIÓ-t, ami fentebb található.
 
 ÖNSZERVEZŐDÉSSEL JAVÍTSUK A CSAPAT TELJESÍTMÉNYÉT:
 * Az agilis munkavégzés további sajátossága, hogy a munkatársak maguk vállalkoznak egyes feladatok elvégzésére.
@@ -109,7 +111,7 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 ### Champion tierlist
 
 * Egy táblázatszerű tierlist a championökről.
-
+*![linken](https://d1ki6hjeuoplax.cloudfront.net/images/_1200x630_crop_center-center_82_none/my-image-4.png?mtime=1643263460)
 ABC rend szerint
 * A champiönök 1-től 5-ig lesznek kategorizálva, az 1 szimbolizálja a legerősebb kategóriát
 
@@ -261,6 +263,27 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 * Ha egy funkció elkészült akkor pull request készítése a masterre.
 * Git push előtt mindig git fetch és git pull futtatása és az esetleges merge conflictok feloldása
 
-## A felület
+### A felhasználó fiókja biztonságának garantálása
+* A jelszó hashelve való tárolása adatbázisban
+* Nem megtámadhatóság, annak megelőzését való felkészülés
+* Esetleg támadások gyors és hatékony kivédése
+* Az adatok ki nem leakelődése
+* Megbízható munkatársak alkalmazása
 
-### A 
+### Hiteles hősinformációk
+* Az oldalnak garantálnia kell hogy a hősökről naprakész információ áll rendelkezésre az oldalon
+* A patchek frissülésével, a játék előrehaladtával az oldalon is változnak az információk
+* A ratingek frissítése
+* A felhasználók emlékeztetése hogy adjanak ki új ratinget hősökre, illetve tárgyakra
+
+### A letisztultság, átláthatóság
+* Az oldal legyen átlátható, könnyen navigálható
+* Legyen letisztult, oda nem illő tartalmak ne jelenjenek meg
+* Oda nem tartozó hírdetések, pop-up reklámok kiszűrése amennyiben lehetséges
+
+### A játékkal kapcsolatos hírek közlése az emberekkel
+* A homepagen a legfontosabb LoL-os események megjelenítése
+* Például a világbajnokság nyomonkövethetősége
+* Vagy egy-egy profi, ismert játékosról való hír olvashatósága
+
+
