@@ -136,8 +136,11 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * javascript
 * ejs - hasonló a html-hez, de lehetővé teszi, hogy az oldalak modulárisak legyenek, illetve lehet vele hasonló html kódokat for ciklussal generálni
 * css
+* bcrypt
+* crypt
 
 ### Felhasznált node package-ek
+* bcrypt - a jelszó hasheléséhez
 * nodemon - a szerver automatikus újra indítása ha elmentünk egy fájlt
 * express.js - routing, localhost
 * sqlite3 - adatbázis kezelése javascriptből
@@ -272,27 +275,41 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 * Git push előtt mindig git fetch és git pull futtatása és az esetleges merge conflictok feloldása
 
 ### A felhasználó fiókja biztonságának garantálása
+* Később szervergép használata, nem otthoni konfigurációról való futtatás
 * A jelszó hashelve való tárolása adatbázisban
 * Nem megtámadhatóság, annak megelőzését való felkészülés
 * Esetleg támadások gyors és hatékony kivédése
 * Az adatok ki nem leakelődése
-* Megbízható munkatársak alkalmazása
+* Megbízható munkatársak
+
+### Trello
+* A trelloban nyomonkövethető az oldal egyes részeinek állapota
+* Nyomonkövethető hogy ki dolgozott az oldalnak egy adott részén
+* A folyamatban lévő feladatok megtekintése
+* Az oldal még tervezés alatt álló részeinek írásba foglalása
+* A feladatok állapotának színezéssel való megjelenítése
+* Külön táblák a készítőknek, ahol címkékkel vannak a feladatok megjelölve és kiosztva
 
 ### Hiteles hősinformációk
 * Az oldalnak garantálnia kell hogy a hősökről naprakész információ áll rendelkezésre az oldalon
 * A patchek frissülésével, a játék előrehaladtával az oldalon is változnak az információk
-* A ratingek frissítése
 * A felhasználók emlékeztetése hogy adjanak ki új ratinget hősökre, illetve tárgyakra
+* Az újradolgozott, reworkolt hősök jelzése
+* Az új hősök hozzáadása az oldalhoz
+* A base ratingek frissítése
 
 ### A letisztultság, átláthatóság
 * Az oldal legyen átlátható, könnyen navigálható
 * Legyen letisztult, oda nem illő tartalmak ne jelenjenek meg
 * Oda nem tartozó hírdetések, pop-up reklámok kiszűrése amennyiben lehetséges
+* A homepagere való visszanavigálás állandó lehetősége
+* Minél kevesebb oldalra való átnavigálás
 
 ### A játékkal kapcsolatos hírek közlése az emberekkel
 * A homepagen a legfontosabb LoL-os események megjelenítése
-* Például a világbajnokság nyomonkövethetősége
+* Például a világbajnokság, szezonális bajnokságok nyomonkövethetősége
 * Vagy egy-egy profi, ismert játékosról való hír olvashatósága
+* Kritikus információk megosztása (ideiglenes szerver leállás, karbantartás, ranked leállása, bugok)
 
 ### A reszponzivitás
 * Fontos hogy az oldal minden eszközön megtekinthető legyen,
