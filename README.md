@@ -95,6 +95,7 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 * BOT/SUPPORT: Bot Lane-re ajánlott Support karaktereket fog megjeleníteni és értékelni.
 * FONTOS!!! BOT Lane-t egyben fog értékelni az oldal, mert nekik együtt kell dolgozni a meccs nagy részében.
 * Az összehasonlítás gombra való kattintással megjelenik a 2 csapatról egy statisztika.
+*![linken](https://casadoapostador.com.br/wp-content/uploads/2020/05/13-Draft-o-que-e.jpg)
 
 ### Champion builds
 
