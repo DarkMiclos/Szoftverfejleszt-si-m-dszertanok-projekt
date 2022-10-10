@@ -294,4 +294,10 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 * Például a világbajnokság nyomonkövethetősége
 * Vagy egy-egy profi, ismert játékosról való hír olvashatósága
 
-
+### A reszponzivitás
+* Fontos hogy az oldal minden eszközön megtekinthető legyen,
+* ne csússzon szét az oldal telefonon, ipad-en, nem szokványos
+* kijelzőjű telefonokon, TV-n, 21:9-es vagy 5:4-es
+* esetleg 4:3-mas monitorokon, a lényeg hogy minden, vagy legalábbis
+* minél több eszközön megfelelően működjön és megfelelő, esztétikus megjelenése
+* legyen az oldalnak.
