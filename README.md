@@ -87,7 +87,7 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 ### Team comp builder
 
 * Ezen az oldalon megtalálható lesz a játék minimapje felnagyítva, minden role "helyén" egy négyzet lesz, amire ha rákattintasz egy dropdown menüből kiválaszthatod a championt.
-* ![compbuilder látványterv]([https://user-images.githubusercontent.com/71171019/190986471-dca69f5a-bc7f-440a-90a0-0193f31d308e.png](https://www.technewstoday.com/wp-content/uploads/2021/08/How-to-Improve-Map-Awareness-in-League-of-Legends.jpg))
+* ![linken](https://www.guidingtech.com/wp-content/uploads/Best-League-of-Legends-Wallpapers-3_4d470f76dc99e18ad75087b1b8410ea9.jpg)
 * TOP LANE: Top lane-re ajánlott karakterek megjelenítése és értékelése.
 * MID LANE: Mid lane-re ajánlott karakterek megjelenítése és értékelése.
 * JUNGLE: Az éppen aktuális jungle meta hőseit fogja megjeleníteni és értékelni.
