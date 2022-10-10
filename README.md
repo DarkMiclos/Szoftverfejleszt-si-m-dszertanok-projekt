@@ -316,5 +316,5 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 * ne csússzon szét az oldal telefonon, ipad-en, nem szokványos
 * kijelzőjű telefonokon, TV-n, 21:9-es vagy 5:4-es
 * esetleg 4:3-mas monitorokon, a lényeg hogy minden, vagy legalábbis
-* minél több eszközön megfelelően működjön és megfelelő, esztétikus megjelenése
+* minél több eszközön megfelelően működjön és igényes, esztétikus megjelenése
 * legyen az oldalnak.
