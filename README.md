@@ -2,10 +2,60 @@
 
 ## League of Legends weboldal
 
-A weboldal gyakorlatilag egy single page application lesz, ahol a különböző nézetek lesznek egymás között cserélgetve attól függően, hogy a felhasználó mit szeretne éppen megtekinteni.
+A weboldal gyakorlatilag egy single page application lesz,
+ ahol a különböző nézetek lesznek egymás között cserélgetve attól függően, hogy a felhasználó mit szeretne éppen megtekinteni.
 A fejlesztéshez agilis módszertant használunk fel.
-A program kis modulokból fog felépülni és ezek lesznek cserélgetve.
-Ketté lesz választva a frontend a backendtől így azok nem fognak egymással keveredni.
+AZ AGILIS MÓDSZERTAN ALAPELVEI
+
+* AZ ÜGYFÉLLEL LEGYEN MEGFELELŐ A KAPCSOLATTARTÁS:
+* Az agilis fejlesztés sajátossága, hogy szoros kapcsolatot tételez fel a szoftver felhasználója és fejlesztői között.
+*  Másképp fogalmazva, a fejlesztés csak akkor lehet eredményes, ha az érintettek közötti kommunikáció megfelelő mélységű.
+
+EGY TERV LEGYEN HIHETŐ (REÁLIS):
+* Az innovatív (kockázatosabb, bizonytalanabb) feladatokat (projekteket) csak olyan időtávra érdemes részletesen megtervezni,
+*  amelyben a tervtől való eltérés mértéke várhatóan nem lesz elfogadhatatlanul nagy.
+*   Ez a tervezési alapelv a klasszikus projektmenedzsment eszköztárából sem hiányzik.
+*    Ami újszerűnek tekinthető az agilis világban, az a tervezés mindenhatóságába vetett hit megkérdőjelezése.
+
+ÖNSZERVEZŐDÉSSEL JAVÍTSUK A CSAPAT TELJESÍTMÉNYÉT:
+* Az agilis munkavégzés további sajátossága, hogy a munkatársak maguk vállalkoznak egyes feladatok elvégzésére.
+*  Ez sem nevezhető új ötletnek, hiszen az önszerveződő csapatok előnyei már régóta ismeretesek.
+
+* Az önszerveződő csapatok jellegzetessége, hogy a csapat tagjai maguk döntik el,
+*  mely munkafázissal foglalkoznak, az egyes tagok képesek többféle munka ellátására, és maguk határozzák meg a jutalmazás és munkakövetés módját.
+
+* Az önszerveződő csapatokban dolgozók csapatkohéziója erősebb,
+*  és így termelékenysége gyakran meghaladja a szokványos munkaszervezéssel vezetett csapatokét.
+*   Nem meglepő tehát, hogy az agilis fejlesztési módszerek eredményesebbnek és hatékonyabbnak bizonyulnak,
+*    amennyiben az elvégzendő feladat természete lehetővé teszi annak önszerveződő csapat általi elvégzését.
+
+* Nyilvánvalóan a csapat tagjainak száma és személyisége is befolyásolja azt,
+*  hogy ez a fajta vezetési módszer alkalmazható-e.
+*   10 főnél nagyobb létszámú csapatoknál gondokba ütközhet a kommunikáció. 
+*   A csapat tagjainak képesnek kell lenniük arra, hogy elvégezzék a vállalt feladatot, és elég ambiciózusnak ahhoz, hogy kellően kezdeményezők legyenek.
+
+* A FELADATOK NYOMON KÖVETÉSE ALAPULJON TÉNYEKEN, ÉS LEGYEN TRANSZPARENS:
+* Mint korábban láttuk, a Scrum módszer előírja a napi Scrum alkalmazását,
+*  ami tulajdonképpen az előrehaladás kontrollja.
+
+* A csapat minden tagja láthatja, hogy a többiek mit végeztek el egy nap alatt.
+*  Az átláthatóságot segíti az is, hogy a csapat tagjai egy helyiségben dolgoznak.
+*   Az előrehaladást és a hátralevő feladatokat lehetőleg grafikusan, mindenki által jól látható helyen teszik közzé.
+*    Nincs kizárólag a feladatok követésével foglalkozó munkatárs,
+*     mindenkinek egyszerre kell dolgoznia és a nyomon követéssel foglalkoznia.
+
+* A VIZUALIZÁCIÓ, A NYOMON KÖVETÉS ESZKÖZE:
+* Az agilis fejlesztések további jellegzetessége a vizualizáció,
+*  ami legtöbbször egy nyomon követést szolgáló tábla alkalmazását jelenti.
+*   Ez a módszer – feltéve, hogy a táblán a valósággal megegyező adatok szerepelnek – egyfajta demokratikus hozzáállást tükröz:
+*    mindenki számára egyértelmű, hogy ki mit végzett el, és mi lesz a következő lépés.
+
+* Ez tulajdonképpen a projekt követésének olyan eszköze,
+*  ami éppen a nyilvánossága miatt egyfajta kényszert is jelent a projekttagok számára,
+*   ugyanis nemcsak a vezető látja az elvégzett munkát,
+*   hanem a csapat összes tagja azonos képet kap.
+* A program kis modulokból fog felépülni és ezek lesznek cserélgetve.
+* Ketté lesz választva a frontend a backendtől így azok nem fognak egymással keveredni.
 
 ### Oldalak:
 * Homepage
@@ -32,19 +82,33 @@ Ketté lesz választva a frontend a backendtől így azok nem fognak egymással 
 
 * A champions oldalon alapesetben a hősök ikonjai lesznek láthatóak
 * Ha rámutatunk az egérrel akkor hover effektel rá zoomolunk a képre és felfed egy rövid leírást a karakterről egy dobozban, illetve át tudunk navigálni a chmapion builds oldalra.
+* Megjeleníti a monológját a karakternek.
 
 ### Team comp builder
 
 * Ezen az oldalon megtalálható lesz a játék minimapje felnagyítva, minden role "helyén" egy négyzet lesz, amire ha rákattintasz egy dropdown menüből kiválaszthatod a championt.
+* TOP LANE: Top lane-re ajánlott karakterek megjelenítése és értékelése.
+* MID LANE: Mid lane-re ajánlott karakterek megjelenítése és értékelése.
+* JUNGLE: Az éppen aktuális jungle meta hőseit fogja megjeleníteni és értékelni.
+* BOT/ADC: Bot Lane-re ajánlott ADC-ket fog megjeleníteni és értékelni.
+* BOT/SUPPORT: Bot Lane-re ajánlott Support karaktereket fog megjeleníteni és értékelni.
+* FONTOS!!! BOT Lane-t egyben fog értékelni az oldal, mert nekik együtt kell dolgozni a meccs nagy részében.
 * Az összehasonlítás gombra való kattintással megjelenik a 2 csapatról egy statisztika.
 
 ### Champion builds
 
 * Dropdown listből kiválaszthatsz egy championt amire megjelennek különböző buildek.
+* TOP LANE: Top lane-re ajánlott karakterek megjelenítése és itemezése.
+* MID LANE: Mid lane-re ajánlott karakterek megjelenítése és itemezése.
+* JUNGLE: Az éppen aktuális jungle meta hőseit fogja megjeleníteni és itemezni.
+* BOT/ADC: Bot Lane-re ajánlott ADC-ket fog megjeleníteni és itemezni.
+* BOT/SUPPORT: Bot Lane-re ajánlott Support karaktereket fog megjeleníteni és itemezni.
 
 ### Champion tierlist
 
 * Egy táblázatszerű tierlist a championökről.
+
+ABC rend szerint
 * A champiönök 1-től 5-ig lesznek kategorizálva, az 1 szimbolizálja a legerősebb kategóriát
 
 Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
@@ -60,23 +124,17 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * javascript
 * ejs - hasonló a html-hez, de lehetővé teszi, hogy az oldalak modulárisak legyenek, illetve lehet vele hasonló html kódokat for ciklussal generálni
 * css
-* mysql workbench
 
 ### Felhasznált node package-ek
 * nodemon - a szerver automatikus újra indítása ha elmentünk egy fájlt
 * express.js - routing, localhost
 * sqlite3 - adatbázis kezelése javascriptből
-* crypto-js - jelszó hasheléshez
-* jest - egységtesztekhez
-* ejs - html templatekhez
 
 ### Tesztelés
 * Egység tesztek - Egység teszteléshez a jest tesztelő rendszert fogjuk használni
 * Integrációs tesztek - Integrációs teszteléshez a Selenide rendszert fogjuk használni
 
 ### Adatbázis séma
-* A champions tábla lesz a fő tábla amire épül maga az adatbázis
-* 3-ik normálforma
 ![adatbázis séma](https://user-images.githubusercontent.com/71171019/190922330-62ff32fa-103f-4ad8-9702-e016733cd679.png)
 
 ### Követelmények
@@ -88,17 +146,12 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * Adatbázis séma elkészítése - mysql workbench-el
 * Adatbázis létrehozása - sqlite
 * User tábla létrehozása - sqlite
-* User tábla lekérdezések elkészítése - sqlite
 * ChampionRating tábla létrehozása - sqlite
-* ChampionRating tábla lekérdezések elkészítése - sqlite
 * Champions tábla létrehozása - sqlite
-* Champions tábla lekérdezések elkészítése - sqlite
 * ChampionRole tábla létrehozása - sqlite
-* ChampionRole tábla lekérdezések elkészítése - sqlite
 * Roles tábla létrehozása - sqlite
-* Roles tábla lekérdezések elkészítése - sqlite
 * Items tábla létrehozása - sqlite
-* Items tábla lekérdezések elkészítése - sqlite
+* Adatbázis lekérdezések elkészítése a különböző táblákhoz - sqlite
 * Adatbázis feltöltse adatokkal - sqlite
 * Javascriptben adatbázis kezelő függvények megírása - javascript, sqlite3 node package
 * Localhost setup - node.js express.js
@@ -111,7 +164,6 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * Routing a champion tierlist oldalnak - express.js
 * Login felület(ui) elkészítése - ejs, css, javascript
 * Login felület elkészítése telefonra - ejs, css javascript
-* Login felület click eventek kezelése
 * Login lekezelése az adatbázisban - sqlite3 node package
 * Login validálása - javascript
 * Jelszó hashelése - javascript, sha-256
@@ -119,15 +171,12 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * Homepage rövid bemutatkozó leírás elkészítése
 * Homepage contact információ megadása
 * Homepage a játékról rövid promótáló videó elhelyezése
-* Homepage click eventek lekezelése
 * A champion ikonok letöltése
 * A chamion ikonok kihelyezése localhostra
 * A champions page elkészítése - ejs, css, javascript
 * Champion ejs template elkészítése
 * Champion hover effekt elkészítése
-* Champions oldal click eventek lekezelése
 * Team comp builder page elkészítése - ejs, css, javascript
-* Team comp builder click eventek lekezelése
 * Minimap kép letöltése
 * A minimapon a négyzetek elhelyezése a különböző ösvények helyein
 * Champion választás lekezelése egy adott ösvényre
@@ -162,6 +211,25 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 
 ### A weblap futtatásának előfeltételei:
 * nodejs
+* A Node.js (vagy másnéven Node) egy rendszer,
+* melyben JavaScriptben írhatunk szerver oldali alkalmazásokat.
+* Maga a rendszer C/C++-ban íródott,
+* és egy esemény alapú I/O rendszert takar a Google V8 JavaScript motorja felett.
+* A Node célja,
+* hogy egy egyszerű felületet adjon,
+* arra, hogy skálázható hálózati alkalmazások írására.
+* Azt tudjuk, hogy a JavaScript a világon a jelenleg legnépszerűbb programozási nyelv,
+* többek között ezért esett erre a nyelvre a választás.
+* A JavaScript nyelvnek vannak más sajátosságai, amelyek szintén előtérbe kerülnek a rendszer használata során.
+* Ahogy a böngészőben, úgy Node alatt is egyetlen esemény hurokban (event loop) fut a program, és ez adja az egyik legfontosabb előnyt.
+* A Node.js-t úgy írták meg,
+* hogy (szinte) minden esemény aszonkron legyen,
+* ezért az program sosem blokkolódik, azaz nem kell várni,
+* hogy egy művelet befejeződjön, vele párhuzamosan futtathatunk további műveleteket.
+* Ez pontosan ugyan úgy működik, mint a böngészőben levő XHR kérések,
+* vagy más események, mint például a click, mouseover. Ez az alkalmazás folyamatosabb futását,
+* több alkalmazás párhuzamosítását,
+* valamint az egész rendszer optimálisabb működését teszi lehetővé.
 
 ### A weblap futtatási menete új gépről:
 * npm install(letölti a szükséges package-eket)
