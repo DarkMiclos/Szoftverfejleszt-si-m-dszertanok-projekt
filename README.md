@@ -65,6 +65,7 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 * Team comp builder
 * Champion builds
 * Champion Tierlist
+* Contact
 
 ### Common
 * navbar - sticky, reszponzív, telefonon hamburger menü
@@ -78,13 +79,15 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 * Rövid leírás az oldalról, hogy milyen funkciói vannak, illetve a készítők megemlítése.
 * A legfrissebben ratelt champiönök(utolsó 5db) megjelennek egy slideshowban.
 * Egy promótáló [videó](https://www.youtube.com/watch?v=mDYqT0_9VR4) a játékról aki nem ismerné.
-* Contact information
+* A készítőkhöz kapcsolódó egyedi képek megjelenítése, úgymond Easter-Egg-ek.
+* Contact information.
 
 ### Champions
 
 * A champions oldalon alapesetben a hősök ikonjai lesznek láthatóak
 * Ha rámutatunk az egérrel akkor hover effektel rá zoomolunk a képre és felfed egy rövid leírást a karakterről egy dobozban, illetve át tudunk navigálni a chmapion builds oldalra.
 * Megjeleníti a monológját a karakternek.
+* ![linken](https://i.ytimg.com/vi/r_PamAugaf0/maxresdefault.jpg)
 
 ### Team comp builder
 
@@ -107,15 +110,20 @@ EGY TERV LEGYEN HIHETŐ (REÁLIS):
 * JUNGLE: Az éppen aktuális jungle meta hőseit fogja megjeleníteni és itemezni.
 * BOT/ADC: Bot Lane-re ajánlott ADC-ket fog megjeleníteni és itemezni.
 * BOT/SUPPORT: Bot Lane-re ajánlott Support karaktereket fog megjeleníteni és itemezni.
+* Az itemek kockaalakú boxokban, fekete körvonallal való megjelenítése.
 
 ### Champion tierlist
 
 * Egy táblázatszerű tierlist a championökről.
 *![linken](https://d1ki6hjeuoplax.cloudfront.net/images/_1200x630_crop_center-center_82_none/my-image-4.png?mtime=1643263460)
 ABC rend szerint
-* A champiönök 1-től 5-ig lesznek kategorizálva, az 1 szimbolizálja a legerősebb kategóriát
+* A champiönök 1-től 5-ig lesznek kategorizálva, az 1 (képen S)szimbolizálja a legerősebb kategóriát
 
 Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
+
+### Contact
+* Egy általános contact oldal, ahol olyan elérhetőséget adunk meg amihez az oldal összes készítője hozzáfér,
+* ide be lehet küldeni az esetleges bugoka, megjelenítési hibákat.
 
 ### Fejlesztéshez felhasznált eszközök
 * vscode
