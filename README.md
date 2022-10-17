@@ -318,3 +318,6 @@ Az objektum orientált paradigma helyett inkább a funkcionális paradigmát has
 * esetleg 4:3-mas monitorokon, a lényeg hogy minden, vagy legalábbis
 * minél több eszközön megfelelően működjön és igényes, esztétikus megjelenése
 * legyen az oldalnak.
+
+### Határidő
+* A tervezett határidő: december 7. (+- 1 hét)
