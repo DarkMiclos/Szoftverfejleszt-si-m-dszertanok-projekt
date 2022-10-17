@@ -138,6 +138,7 @@ Az első 4hétben a Homepage oldalt készítjük el a common dolgokkal együtt.
 * css
 * bcrypt
 * crypt
+* sqlite database browser - az adatbázis megtervézéséhez, kapcsolatok kialakításához
 
 ### Felhasznált node package-ek
 * bcrypt - a jelszó hasheléséhez
