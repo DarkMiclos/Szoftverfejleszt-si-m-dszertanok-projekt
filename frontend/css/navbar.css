@@ -1,0 +1,175 @@
+@font-face {
+    font-family: CimFont;
+    src: url(../fonts/Friz\ Quadrata\ Regular.ttf);
+  }
+
+@font-face {
+    font-family: Infofont;
+    src: url(../fonts/Friz\ Quadrata\ Regular.ttf);
+}
+
+  * {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: #070720
+  }
+
+  
+  #cim {
+    font-family: CimFont;
+    color:goldenrod;
+    text-align: center;
+  }
+
+  #cimsor {
+    font-family: CimFont;
+    color:goldenrod;
+    text-align: left;
+    padding-top: 30px;
+    margin-left: 25px;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    font-family: CimFont;
+    color: white;
+    background-color: #17172E;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid;
+    border-color: #2C2C40;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .first{
+    width: 75vw;
+    text-align: left;
+  }
+
+  /*@media screen and (max-width: 990px) {
+    .first {
+    width: 100vw;
+    font-size: 16px;
+  }
+}*/
+
+  .second {
+    width: 25vw;
+    text-align: right;
+  }
+
+/*@media screen and (max-width: 990px) {
+    .second {
+    display:none;
+  }
+}*/
+  
+  .home:hover,.champ:hover,.tier:hover,.team:hover,.login:hover,.reg:hover{
+    color:goldenrod;
+  }
+  
+  #nav {
+    margin-right: 25px;
+  }
+  
+  .videobar{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid;
+    border-color: #2C2C40;
+    border-collapse: collapse;
+    padding-bottom: 40px;
+  }
+
+  .video {
+    display: block;
+    width: 40vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .miertbox{
+    display:block;
+    width: 55vw;
+  }
+
+  .miert {
+    display: block;
+    color:white;
+    font-family: Infofont;
+    padding-top: 15px;
+    text-align: justify;
+    white-space: pre-wrap;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid;
+    border-color: #2C2C40;
+    border-collapse: collapse;
+    padding-bottom: 40px;
+  }
+
+.info {
+    width: 50vw;
+    color:white;
+    margin-left: 25px;
+    font-family: Infofont;
+    text-align: justify;
+  }
+
+.vb {
+    display: block;
+    width: 50vw;
+  }
+
+  .foot{
+    background-color: #17172E;
+    display: flex;
+    align-items: center;
+  }
+
+  #kapcsolat {
+    font-family: CimFont;
+    color:goldenrod;
+    text-align: left;
+    margin-left: 25px;
+  }
+
+  .kapcsolat{
+    display:block;
+  }
+
+  .keszitok{
+    display: block;
+    color:white;
+    font-family: Infofont;
+    text-align: justify;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 25px;
+    padding-bottom: 40px;
+    width: 50vw;
+    align-items: center;
+  }
+
+  .logo{
+    width: 50vw;
+    text-align: center;
+  }

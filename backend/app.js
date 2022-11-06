@@ -6,7 +6,7 @@ const port = 3000
 
 database.createUserTable()
 
-app.use(express.static("frontend/html"))
+app.use(express.static('frontend'))
 app.use(express.urlencoded({ extended: false}))
 
 app.set('view engine', 'ejs')
@@ -14,11 +14,15 @@ app.set('view engine', 'ejs')
 app.engine('html', require('ejs').renderFile);
 
 app.get('/', (req, res) => {
-  res.render("navbar", {})
+  res.render("homepage.ejs", {})
 })
 
 app.get('/login', (req, res) => {
   res.render("login.ejs", {})
+})
+
+app.get('/home', (req, res) => {
+  res.render("homepage.ejs", {})
 })
 
 app.post('/login', (req, res, next) => {
