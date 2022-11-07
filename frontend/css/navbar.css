@@ -23,6 +23,7 @@
     font-family: CimFont;
     color:goldenrod;
     text-align: center;
+    font-size: 2vw;
   }
 
   #cimsor {
@@ -31,6 +32,16 @@
     text-align: left;
     padding-top: 30px;
     margin-left: 25px;
+    font-size: 2vw;
+  }
+
+  #miertcim {
+    font-family: CimFont;
+    color:goldenrod;
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 25px;
+    font-size: 2vw;
   }
   
   
@@ -40,7 +51,7 @@
     color: white;
     background-color: #17172E;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.5vw;
     margin-bottom: 20px;
     border-bottom: 3px solid;
     border-color: #2C2C40;
@@ -115,6 +126,8 @@
     padding-top: 15px;
     text-align: justify;
     white-space: pre-wrap;
+    width: 55vw;
+    font-size: 0.9vw;
   }
 
   .container{
@@ -132,6 +145,7 @@
     margin-left: 25px;
     font-family: Infofont;
     text-align: justify;
+    font-size: 0.9vw;
   }
 
 .vb {
@@ -150,6 +164,7 @@
     color:goldenrod;
     text-align: left;
     margin-left: 25px;
+    font-size: 1.75vw;
   }
 
   .kapcsolat{
@@ -167,9 +182,21 @@
     padding-bottom: 40px;
     width: 50vw;
     align-items: center;
+    font-size: 0.75vw;
   }
 
   .logo{
     width: 50vw;
     text-align: center;
+  }
+
+  .youtube{
+    width: 35vw;
+    height: 18vw;
+    font-size: 0.5vw;
+  }
+
+  .lollogo{
+    width: 25vw;
+    height: 25vh;
   }

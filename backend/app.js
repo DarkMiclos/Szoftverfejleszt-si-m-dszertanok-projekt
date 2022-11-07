@@ -25,10 +25,6 @@ app.get('/home', (req, res) => {
   res.render("homepage.ejs", {})
 })
 
-app.get('/', (req, res) => {
-  res.render("homepagehtml.html", {})
-})
-
 app.post('/login', (req, res, next) => {
   var db = database.openDatabase()
   let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${req.body.password}"`;
