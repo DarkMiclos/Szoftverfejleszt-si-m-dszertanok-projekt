@@ -20,25 +20,16 @@ app.get('/login', (req, res) => {
   res.render("login.ejs", {})
 })
 
-async function hashPassword(password){
-    const originalpassword = password;
-    const saltRounds = 10;
-    passwordHash = "";
-    await bcrypt.hash(originalpassword, saltRounds).then(value => {
-    passwordHash = value;
-    });
-    return passwordHash;
-}
-
 app.post('/login', (req, res, next) => {
   var db = database.openDatabase()
-  const pw = hashPassword(req.body.password);
-  let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${pw}"`;
+  let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${req.body.password}"`;
   var x = 0;
+
+  async function isMatch(password) {return await bcrypt.compare(password,row.passwordHash)};
 
   db.all(sql, (err, rows) => {
    rows.forEach((row) => {
-     if (row.userName === req.body.userName || row.passwordHash === req.body.password) {
+     if (row.userName === req.body.userName || isMatch(req.body.password)) {
          x = 1;
          database.closeDatabase();
      }
@@ -61,7 +52,7 @@ app.get('/register', (req, res) => {
 
 app.post("/register", (req, res) => {
   database.createNewUser(req.body.userName, req.body.password)
-  console.log(database.getUserTable())
+  //console.log(database.getUserTable())
   res.redirect("/login")
 })
 

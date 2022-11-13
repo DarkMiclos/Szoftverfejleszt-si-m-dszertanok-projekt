@@ -22,28 +22,18 @@ function createUserTable() {//Only creates table if it not exists
     closeDatabase(db);
 }
 
-async function hashPassword(password){
-    const originalpassword = password;
-    const saltRounds = 10;
-    passwordHash = "";
-    await bcrypt.hash(originalpassword, saltRounds).then(value => {
-    passwordHash = value;
-    });
-    return passwordHash;
-}
-
 async function createNewUser(userName, password) {
     db = openDatabase();
     console.log(password);
-    const passwordHash = hashPassword(password);
+    const passwordHash = await bcrypt.hash(password, 12);
     console.log(passwordHash);
-    //Todo hash password
-    db.run("INSERT INTO user(userId, userName, passwordHash) VALUES(NULL,?,?)", [userName, passwordHash], (err) => {
+    await db.run("INSERT INTO user(userId, userName, passwordHash) VALUES(NULL,?,?)", [userName, passwordHash], (err) => {
         if(err) {
             return console.log(err.message);
         }
         console.log("Row was added to the table");
     })
+    
     closeDatabase(db);
 }
 
