@@ -7,31 +7,35 @@ const port = 3000
 
 database.createUserTable()
 
-app.use(express.static("frontend/html"))
+app.use(express.static('frontend'))
 app.use(express.urlencoded({ extended: false}))
 
 app.set('view engine', 'ejs')
 
+app.engine('html', require('ejs').renderFile);
+
 app.get('/', (req, res) => {
-  res.render("index", {})
+  res.render("homepage.ejs", {})
 })
 
 app.get('/login', (req, res) => {
   res.render("login.ejs", {})
 })
 
+app.get('/home', (req, res) => {
+  res.render("homepage.ejs", {})
+})
+
 app.post('/login', (req, res, next) => {
   var db = database.openDatabase()
-  let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${req.body.password}"`;
+  let sql = `SELECT * FROM user WHERE userName = "${req.body.userName}" AND passwordHash = "${"$2b$12$Ea.VjKx80AvqH.eF18JsrO"+req.body.password}"`;
   var x = 0;
-
-  async function isMatch(password) {return await bcrypt.compare(password,row.passwordHash)};
 
   db.all(sql, (err, rows) => {
    rows.forEach((row) => {
-     if (row.userName === req.body.userName || isMatch(req.body.password)) {
+     if (row.userName === req.body.userName || row.passwordHash === hashPassword(req.body.password)) {
          x = 1;
-         database.closeDatabase();
+         database.closeDatabase(db);
      }
      else{
          x = 2;

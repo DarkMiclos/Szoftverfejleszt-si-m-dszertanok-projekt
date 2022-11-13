@@ -25,7 +25,7 @@ function createUserTable() {//Only creates table if it not exists
 async function createNewUser(userName, password) {
     db = openDatabase();
     console.log(password);
-    const passwordHash = await bcrypt.hash(password, 12);
+    const passwordHash = await bcrypt.hash(password, "$2b$12$Ea.VjKx80AvqH.eF18JsrO");
     console.log(passwordHash);
     await db.run("INSERT INTO user(userId, userName, passwordHash) VALUES(NULL,?,?)", [userName, passwordHash], (err) => {
         if(err) {
