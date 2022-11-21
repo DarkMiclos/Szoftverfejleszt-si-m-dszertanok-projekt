@@ -26,6 +26,11 @@ app.get('/champions', (req, res) => {
   res.render("champions.ejs", {});
 })
 
+app.get('/champions/:id', (req, res) => {
+  championName = req.params.id;
+  res.render("champion.ejs", {championName});
+})
+
 app.get('/teambuilder', (req, res) => {
   res.render("teambuilder.ejs", {});
 })

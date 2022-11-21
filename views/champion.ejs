@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/champion.css">
+  <script src="/javascript/champions.js"></script>
+</head>
+<body>
+  <%- include("navbar.ejs") %>
+  <div id="main-container">
+    <div id="left-container">
+      <div id="lore-container" class="my-container">
+        <h4>Lore</h4>
+      </div>
+      <div id="spells-container" class="my-container">
+        <h4>Spells</h4>
+      </div>
+    </div>
+    <div id="right-container">
+      <div id="skin-container" class="my-container">
+        <h4>Skins</h4>
+      </div>
+      <div id="stats-container" class="my-container">
+        <h4>Stats</h4>
+        <div id="stat-container"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (async () => await generateSkinSplashes("<%= championName %>"))()
+    .then(() => {
+      showCurrentSplash(0);
+    });
+    (async () => await showLore("<%= championName %>"))();
+    (async () => await showStats("<%= championName %>"))();
+  </script>
+</body>
+</html>
