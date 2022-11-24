@@ -15,7 +15,9 @@
 .my-container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: rgb(73, 79, 85);
   border-radius: 25px;
   margin: 2vh 1vw;
@@ -67,12 +69,6 @@ h4 {
   margin: 3vh 3vw;
 }
 
-#stats-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #stat-container {
   display: flex;
   flex-wrap: wrap;
@@ -89,4 +85,35 @@ h4 {
 
 .stat-name {
   margin: 1vh 1vw;
+}
+
+.spell-container {
+  display: flex;
+  margin: 3vh 3vw;
+}
+
+.spell, .passive {
+  margin: 1vh 1vw;
+  width: 4vw;
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  color: white;
+  background-color: #070720;
+  border: #2C2C40 5px solid;
+  width: 20vw;
+  left: -8vw;
+  top: 8vh;
+  position: absolute;
+}
+
+.tooltip div {
+  margin: 1vh 1vw;
+}
+
+.spell:hover .tooltip, .passive:hover .tooltip {
+  display: flex;
+  flex-direction: column;
 }

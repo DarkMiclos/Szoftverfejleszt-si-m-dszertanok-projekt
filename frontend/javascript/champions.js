@@ -27,12 +27,19 @@ function getChampionSplashArtSource(championName, id) {
 }
 
 //Small icon
-async function getChampionIconByName(championName) {
-  return await fetch("http://ddragon.leagueoflegends.com/cdn/img/champion/" + championName + ".png")
-  .then(response => response.blob());
+function getChampionIconSource(championName) {
+  return "http://ddragon.leagueoflegends.com/cdn/img/champion/" + championName + ".png";
 }
 
-async function showChampionLoadingScreenIcon(championName) {
+function getChampionPassiveSource(passiveName) {
+  return "http://ddragon.leagueoflegends.com/cdn/12.22.1/img/passive/" + passiveName;
+}
+
+function getChampionSpellSource(spellId) {
+  return "http://ddragon.leagueoflegends.com/cdn/12.22.1/img/spell/" + spellId + ".png"
+}
+
+function showChampionLoadingScreenIcon(championName) {
   iconSource = getChampionLoadingScreenIconSource(championName);
   const img = document.createElement("img");
   const championContainer = document.createElement("a");
@@ -91,6 +98,11 @@ async function getChampionTags(championName) {
 async function getChampionStats(championName) {
   let data = await getChampionDataByName(championName);
   return data.stats;
+}
+
+async function getChampionPassive(championName) {
+  let data = await getChampionDataByName(championName);
+  return data.passive;
 }
 
 async function generateSkinSplashes(championName) {
@@ -159,4 +171,55 @@ async function showStats(championName) {
     stat.appendChild(statText);
     document.getElementById("stat-container").appendChild(stat);
   }
+}
+
+async function showSpells(championName) {
+  const spells = await getChampionSpellData(championName);
+  const passiveData = await getChampionPassiveData(championName);
+  console.log(passiveData);
+  const spellContainer = document.createElement("div");
+  const passive = document.createElement("div");
+  const passiveIcon = document.createElement("img");
+  const passiveSource = getChampionPassiveSource(passiveData.image.full);
+  const passiveDescription = document.createElement("div");
+  const passiveName = document.createElement("div");
+  const passiveTooltip = document.createElement("div");
+
+  spellContainer.classList.add("spell-container");
+  passive.classList.add("passive");
+  passiveIcon.src = passiveSource;
+  passiveDescription.innerText = passiveData.description;;
+  passiveName.innerText = passiveData.name;
+  passiveTooltip.classList.add("tooltip");
+
+  passive.appendChild(passiveIcon);
+  passive.appendChild(passiveTooltip);
+  passiveTooltip.appendChild(passiveName);
+  passiveTooltip.appendChild(passiveDescription);
+  spellContainer.appendChild(passive);
+
+  for(let i = 0; i < spells.length; i++) {
+    let imgSource = getChampionSpellSource(spells[i].id);
+    const spell = document.createElement("div");
+    const spellIcon = document.createElement("img");
+    const spellToolTipPopUp = document.createElement("div");
+    const spellName = document.createElement("div");
+    const spellCooldown = document.createElement("div");
+    const spellDescription = document.createElement("div");
+
+    spellName.innerText = spells[i].name;
+    spellCooldown.innerText = "Cooldown: " + spells[i].cooldownBurn;
+    spellDescription.innerText = spells[i].description;
+    spellIcon.src = imgSource;
+    spell.classList.add("spell");
+    spellToolTipPopUp.classList.add("tooltip");
+
+    spellToolTipPopUp.appendChild(spellName);
+    spellToolTipPopUp.appendChild(spellCooldown);
+    spellToolTipPopUp.appendChild(spellDescription);
+    spell.appendChild(spellIcon);
+    spell.appendChild(spellToolTipPopUp);
+    spellContainer.appendChild(spell);
+  }
+  document.getElementById("spells-container").appendChild(spellContainer);
 }
