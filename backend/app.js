@@ -1,12 +1,13 @@
 const { response } = require('express')
 const express = require('express')
 const database = require('./database')
+const path = require('node:path');
 const app = express()
 const port = 3000
 
 database.createUserTable()
 
-app.use(express.static("frontend/html"))
+app.use(express.static(path.join(__dirname, '../frontend')))
 app.use(express.urlencoded({ extended: false}))
 
 app.set('view engine', 'ejs')
@@ -14,11 +15,32 @@ app.set('view engine', 'ejs')
 app.engine('html', require('ejs').renderFile);
 
 app.get('/', (req, res) => {
-  res.render("navbar", {})
+  res.render("homepage.ejs", {})
+})
+
+app.get('/tierlist', (req, res) => {
+  res.render("tierlist.ejs", {});
+})
+
+app.get('/champions', (req, res) => {
+  res.render("champions.ejs", {});
+})
+
+app.get('/champions/:id', (req, res) => {
+  championName = req.params.id;
+  res.render("champion.ejs", {championName});
+})
+
+app.get('/teambuilder', (req, res) => {
+  res.render("teambuilder.ejs", {});
 })
 
 app.get('/login', (req, res) => {
   res.render("login.ejs", {})
+})
+
+app.get('/home', (req, res) => {
+  res.render("homepage.ejs", {})
 })
 
 app.post('/login', (req, res, next) => {
